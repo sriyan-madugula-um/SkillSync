@@ -2,7 +2,7 @@ import { Navbar, Container, Nav, NavDropdown, Button} from "react-bootstrap";
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import logo from '../logo512.png' // handshake logo
+import logo from '../log.png' // handshake logo
 
 class LandingNavBar extends Component {
 
@@ -12,8 +12,8 @@ class LandingNavBar extends Component {
         return(
             <Navbar>
                 <Navbar.Brand>
-                    <div style={{width:'45px', height:'45px'}}>
-                        <img style={{width:'45px', height:'45px'}} src={logo} />
+                    <div style={{width:'100px', height:'100px'}}>
+                        <img style={{width:'100px', height:'100px'}} src={logo} />
                     </div>
                     
                 </Navbar.Brand>

@@ -6,7 +6,7 @@ import Landing from './pages/Landing.js';
 import Home from './pages/Home.js';
 import {Login} from './components/Login.jsx';
 import Contact from './pages/Contact.js';
-import ChatElement from './pages/ChatElement.js';
+import Chat from './components/Chat.jsx';
 import About from './pages/About.js';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/about" element={<About />} />
               <Route exact path="/contact" element={<Contact />} />
-              <Route exact path="/chat" element={<ChatElement />} />
+              <Route exact path="/chat" element={<Chat />} />
             </Routes>
             </Router>
         </div>

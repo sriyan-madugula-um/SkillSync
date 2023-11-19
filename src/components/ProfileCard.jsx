@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Card, Button,  } from "react-bootstrap";
+import { Row, Card, Button, Col } from "react-bootstrap";
 
 import {Link} from 'react-router-dom';
 
@@ -12,9 +12,26 @@ export const ProfileCard = ({user}) => {
           <Card.Body>
               <div className="position-relative" style={{ top: '35%' }}>
                   <Card.Title>{user.displayName}</Card.Title>
-                  <Card.Text>{user.email}</Card.Text>
+                  <Card.Text>
+                    {user.email}
+                    <br />
+                    <br />
+                    <br />
+
+                    <Row className="">
+                        <Col>
+                            <text>Share <span class="badge badge-secondary m-1 p-2">{user.share1}</span></text>
+                            <span class="badge badge-secondary m-1 p-2">{user.share2}</span>
+                            <span class="badge badge-secondary m-1 p-2">{user.share3}</span>
+                        </Col>
+                        
+                        <Col>
+                            <text>Learn <span class="badge badge-secondary m-1 p-2">{user.learn}</span></text>
+                        </Col>
+                    </Row>
+                  </Card.Text>
                   <Link to={user.dest}>
-                    <Button variant="primary">Contact</Button>
+                    <Button variant="primary">Link</Button>
                   </Link>
               </div>
           </Card.Body>
