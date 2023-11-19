@@ -1,4 +1,6 @@
 import React, { Component, useState } from "react";
+import { Row, Col } from "react-bootstrap";
+
 
 import { Button } from "react-bootstrap";
 
@@ -22,38 +24,48 @@ class About extends Component {
 
         const user = {
             displayName: 'Anish Chandra',
-            email: 'john.doe@example.com',
-            avatar: '../anishc.jpg',
+            email: 'anishcha@umich.edu',
+            avatar: 'https://media.licdn.com/dms/image/D5603AQHfs_0HYSceug/profile-displayphoto-shrink_800_800/0/1699142544635?e=1706140800&v=beta&t=vfh7DTcj-bbvPfBjBzuLDnAWyqPriJB_tDw6uqgXCGg',
             // Add more user information as needed
         };
         const user1 = {
             displayName: 'Soham Salunke',
-            email: 'john.doe@example.com',
-            avatar: '../sohams.jpg',
+            email: 'sohamsal@umich.edu',
+            avatar: 'https://media.licdn.com/dms/image/D5603AQHYjwIFsrEpnw/profile-displayphoto-shrink_800_800/0/1690765018430?e=1706140800&v=beta&t=pFqbivlKdec0M-JM_2qZ9r9me75TfwRaCnzR_c9aZCA',
             // Add more user information as needed
         };
         const user2 = {
             displayName: 'Akul Gunukula',
-            email: 'john.doe@example.com',
-            avatar: '../akulg.jpg',
+            email: 'akulg@umich.edu',
+            avatar: 'https://media.licdn.com/dms/image/D5603AQGOHyC1PUEkUA/profile-displayphoto-shrink_800_800/0/1694029301179?e=1706140800&v=beta&t=Wdv0ROUbGFdq0q-isd_Gp7MxCOFJNxuB4MEGA9PYE78',
             // Add more user information as needed
         };
         const user3 = {
             displayName: 'Sriyan Madugula',
-            email: 'john.doe@example.com',
-            avatar: '../sriyanm.jpg',
+            email: 'sriyan@umich.edu',
+            avatar: 'https://media.licdn.com/dms/image/D4E03AQFTrP7N0qpa9Q/profile-displayphoto-shrink_800_800/0/1664580526929?e=1706140800&v=beta&t=kkwdkSFnNp2TKiKfKtDPQfp_H1x8krWC15_c-RbXUfw',
             // Add more user information as needed
         };
 
 
         return (
-            <div className="app" >
-                <AboutMe user={user} />
-                <AboutMe user={user1} />
-                <AboutMe user={user2} />
-                <AboutMe user={user3} />
+            <div className="app">
+              <Row>
+                <Col>
+                  <AboutMe user={user} />
+                </Col>
+                <Col>
+                  <AboutMe user={user1} />
+                </Col>
+                <Col>
+                  <AboutMe user={user2} />
+                </Col>
+                <Col>
+                  <AboutMe user={user3} />
+                </Col>
+              </Row>
             </div>
-        );
+          );
     }
 }
 

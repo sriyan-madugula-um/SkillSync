@@ -1,7 +1,9 @@
 import React from 'react';
-import { Row, Card, Button } from "react-bootstrap";
+import { Row, Card, Button,  } from "react-bootstrap";
 
-export const AboutMe = ({user}) => {
+import {Link} from 'react-router-dom';
+
+export const ProfileCard = ({user}) => {
   return (
       <Card style={{ width: '70%', margin: '50px', borderRadius: '15px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
           <div className="overflow-hidden rounded-circle" style={{ width: '150px', height: '150px', margin: 'auto', position: 'center', top: '25%' }}>
@@ -11,7 +13,9 @@ export const AboutMe = ({user}) => {
               <div className="position-relative" style={{ top: '35%' }}>
                   <Card.Title>{user.displayName}</Card.Title>
                   <Card.Text>{user.email}</Card.Text>
-                  <Button variant="primary">View Profile</Button>
+                  <Link to={user.dest}>
+                    <Button variant="primary">Contact</Button>
+                  </Link>
               </div>
           </Card.Body>
       </Card>
@@ -19,4 +23,4 @@ export const AboutMe = ({user}) => {
 }
 
 
-export default AboutMe;
+export default ProfileCard;

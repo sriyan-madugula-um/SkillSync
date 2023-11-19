@@ -8,19 +8,22 @@ import backgroundImage from "./Landing_3.png";
 
 import { Login } from "../components/Login";
 
-class Landing extends Component {
+import {Link} from 'react-router-dom';
 
 
-    render() {
+function Landing() {
 
         var btns = []
         let text = ["About Us", "Contact Us", "Login/Signup"]
+        let url = ['/about', '/contact'];
 
         for(let i = 0; i < 2; ++i) {
             btns.push(
-                <Button variant="transparent" className="mr-3 ml-3">
-                    {text[i]}
-                </Button>
+                <Link to={url[i]}>
+                    <Button variant="transparent" className="mr-3 ml-3">
+                        {text[i]}
+                    </Button>
+                </Link>
             )
         }
 
@@ -52,6 +55,5 @@ class Landing extends Component {
         
         );
     }
-}
 
 export default Landing;

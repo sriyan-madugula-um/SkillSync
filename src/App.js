@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 import Landing from './pages/Landing.js';
 import Home from './pages/Home.js';
 import {Login} from './components/Login.jsx';
+import Contact from './pages/Contact.js';
+import ChatElement from './pages/ChatElement.js';
 import About from './pages/About.js';
 
 function App() {
@@ -23,10 +25,12 @@ function App() {
             <script src="https://apis.google.com/js/api.js"></script>
             <Router basename={process.env.PUBLIC_URL}>
             <Routes>
-              <Route exact path='/' element={<Landing/>} />
-              <Route path="/home" element={<Home />} />
+            <Route exact path='/' element={<Landing/>} />
+              <Route exact path="/home" element={<Home />} />
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/about" element={<About />} />
+              <Route exact path="/contact" element={<Contact />} />
+              <Route exact path="/chat" element={<ChatElement />} />
             </Routes>
             </Router>
         </div>
