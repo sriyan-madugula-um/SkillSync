@@ -1,24 +1,32 @@
 import React from "react";
 
 import { auth , googleProvider} from "../firebase";
-import {signInWithPopup} from "firebase/auth";
+import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link,  } from "react-router-dom";
 
-export const Login = () => {
+export const Login = (props) => {
     const nav = useNavigate();
+    let isResult = true;
+    var user = '';
     const signInWithGoogle = async () => {
         try {
-        await signInWithPopup(auth,googleProvider);
-        nav('/home')
-        } catch (err){
-        console.error(err);
+            const result = await signInWithPopup(auth,googleProvider);
+            user = result.user.uid;
+            nav('/home', {
+                state: {
+                    id: user
+                }
+            });
+        } catch (err) {
+            console.error(err);
+            isResult = false;
         }
     };
 
   return (
-    <Button className="primary" onClick={signInWithGoogle}>
-        Login
-    </Button>
+        <Button className="primary" onClick={signInWithGoogle}>
+            Login
+        </Button>
   );
 };

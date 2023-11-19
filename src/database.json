@@ -1,0 +1,10 @@
+{
+    "users": {
+        "96XKZTntzlOooefzELtC3yLhjO33": {
+            "name": "Anish Chandra",
+            "desc": "An Aspiring Software Engineering Looking for Their First Professional Experience",
+            "strengths": ["C++", "Python"],
+            "weaknesses": ["React"]
+        }
+    }
+}
