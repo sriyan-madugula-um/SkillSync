@@ -1,7 +1,7 @@
 import React from "react";
 
 import { auth , googleProvider} from "../firebase";
-import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import {GoogleAuthProvider, signInWithPopup, signInWithRedirect} from "firebase/auth";
 import { Button } from "react-bootstrap";
 import { useNavigate, Link,  } from "react-router-dom";
 
@@ -11,7 +11,7 @@ export const Login = (props) => {
     var user = '';
     const signInWithGoogle = async () => {
         try {
-            const result = await signInWithPopup(auth,googleProvider);
+            const result = await signInWithRedirect(auth,googleProvider);
             user = result.user.uid;
             nav('/home', {
                 state: {
