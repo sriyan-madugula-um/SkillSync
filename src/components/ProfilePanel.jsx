@@ -12,7 +12,7 @@ export const ProfilePanel = (props) => {
     return (
         <Card style={{height:'100vh'}}>
             <div className="overflow-hidden rounded-circle" style={{ width: '150px', height: '150px', position: 'center' }}>
-              <img className="img-fluid rounded-circle" src={anish} style={{position:'absolute',  marginTop:'50px', marginRight: '20px'}} />
+              <img className="img-fluid rounded-circle" src={anish} style={{position:'absolute',  marginTop:'50px', left:'7.5%'}} />
           </div>
             <Card.Body>
                 <div className="position-relative" style={{top:'35%'}}>

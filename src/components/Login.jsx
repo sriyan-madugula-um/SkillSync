@@ -11,7 +11,7 @@ export const Login = (props) => {
     var user = '';
     const signInWithGoogle = async () => {
         try {
-            const result = await signInWithRedirect(auth,googleProvider);
+            const result = await signInWithPopup(auth,googleProvider);
             user = result.user.uid;
             nav('/home', {
                 state: {
