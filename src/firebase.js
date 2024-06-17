@@ -11,7 +11,7 @@ import {getDatabase} from 'firebase/database';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAtHu5JB_W9lyB0XcTg7LvTMb2VC1HPMw4",
+  apiKey: "",
   authDomain: "skillsync-dcc60.firebaseapp.com",
   projectId: "skillsync-dcc60",
   storageBucket: "skillsync-dcc60.appspot.com",

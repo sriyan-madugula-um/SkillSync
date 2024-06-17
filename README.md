@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# SkillSync
+Submitted to MHacks 16.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Inspiration
 
-## Available Scripts
+The inspiration for SkillSync stems from the increasingly volatile and unpredictable nature of today's job market. With technological advancements and economic shifts leading to rapid changes in job requirements, many professionals face job insecurity and uncertainty about their future roles. Recognizing the power of continuous learning and adaptability in this landscape, SkillSync was envisioned as a platform to combat these challenges.
 
-In the project directory, you can run:
+# What it does
 
-### `npm start`
+SkillSync facilitates a dynamic environment where individuals can proactively share and learn skills through peer-to-peer knowledge sharing. By linking people to exchange skills, SkillSync aims to Exchange, Empower, Elevate users to become more versatile and valuable in their professional lives. We do this by first linking users who have a mutual skill exchange through OpenAI's Gen4 Turbo API that matches skills to share and skills to learn between two people. Once users become SkillLinks with each other, they can set up a time to Sync skills with our SyncUp function. The function enables users to find a time through a shared availability schedule, generate an adaptable agenda, and utilize the Google Meet API to facilitate a structured, timely meeting. Following their SyncUp, each user will be prompted to review their experience, potentially follow up with their SkillLink, or update their profile. By prioritizing SyncUp feedback, we commit to protecting the time of our users and the validity of the skills they share and acquire, enhancing job security and technical development in an ever-evolving work world.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# How we built it
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We chose react as our framework to create our platform. To begin, we developed prototype profile architecture in order to understand what elements are important to the user linking algorithm, SkillLink network, and SyncUp experience. We built out each page to conform to our fleshed out drawings which connect users based on their strengthens and learning goals.
 
-### `npm test`
+# Challenges we ran into
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Connecting the backend to the frontend provided challenges to integrate firebase into our system. This was essential for database control and user authentication which we eventually found.
 
-### `npm run build`
+# Accomplishments that we're proud of
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We're proud to contribute to a prominent social problem - job insecurity - particularly in the face of record layoffs in the tech industry. We're confident that our skill syncing platform can revolutionize a new wave of peer-to-peer learning, enabling employees to collaborate with one another and promote their own professional development for free. This in turn reduces the need for employers to turn to mass layoffs for cost-cutting, addressing multiple facets of this complicated issue.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ultimately, this is our first hackathon. We had little expectations going in - just wanted to have fun and build something that hopefully at least a few people would consider using. Given the time constrains and our relative inexperience, we are incredibly proud of the commitment we put in, the timeless hours staring at code, and the insightful learnings we took away.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# What we learned
 
-### `npm run eject`
+On the technical side, we developed a greater understanding of how components and elements interact with each other in React. In specific, we learned how to integrate third party libraries like Firebase to implement our login authentication system and streamline our database management. We gained experience in the Document Object Model (DOM) to connect web pages and script our backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In addition, we learned about successful ways to brainstorm ideas. Initially, we had trouble brainstorming topics that we all had mutual passions in developing and strengths in contributing. Eventually, we adopted a ideation model in which we listed out a bunch of topics that we found meaningful to our lives. We rated each topic by the level of passion we expressed, the technical complexities of addressing the problem, and the societal significance of our potential impact. This method of ideation boosted our efficiency significantly and ensured clarity in our next steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# What's next for SkillSync
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Google Meet API is not currently fully integrated into our React webapp due to the limitations of the Google Developer Workspace. We're confident that as the API gets more popular in the tech industry, it will be more widely accessible to users like ourselves and that we can implement a seamless integration into our SyncUp feature. In addition, we plan on developing a dynamic schedule builder for users to set up a meeting rather than a default chat feature, as we want to take on more responsibility in firmly establishing the sync amongst our users.
